@@ -551,6 +551,11 @@ article.container::before{
   justify-content: space-between;
   gap: 16px;
 }
+.highlight-card .card-list{
+  flex-wrap: wrap;
+  flex-grow: 1;
+  row-gap: 8px;
+}
 .highlight-card .card-item{
   width: 50%;
   justify-content: flex-end;
