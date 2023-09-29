@@ -303,7 +303,7 @@ body{
   #HEADER
 \*-----------------------------------*/
 
-.header.btn-primary.span{
+.header .btn-primary.span{
   display: none;
 }
 .logo img{
@@ -314,7 +314,7 @@ body{
   display: flex;
   align-items: center;
 }
-.header.container{
+.header .container{
   justify-content: space-between;
 }
 .header-actions{
@@ -381,7 +381,7 @@ body{
 .search-field::-webkit-search-cancel-button{
   display: none;
 }
-.search-wrapper.leading-icon{
+.search-wrapper .leading-icon{
   position: absolute;
   top: 50%;
   left: 28px;
@@ -389,14 +389,14 @@ body{
 }
 .search-wrapper > m-icon{display: none;}
 
-.search-wrapper.icon-btn{
+.search-wrapper .icon-btn{
   background-color: transparent;
   box-shadow: none;
 }
-.search-view.view-list{
+.search-view .view-list{
   padding-block: 8px 16px;
 }
-.search-view.view-item{
+.search-view .view-item{
   position: relative;
   height: 56px;
   display: flex;
@@ -623,6 +623,10 @@ article.container::before{
   display:flex;
   gap: 12px;
 }
+.slider-list:first-child{
+  margin-block-end: 16px;
+}
+
 .slider-list::before,
 .slider-list::after{
   content: "";
@@ -632,11 +636,6 @@ article.container::before{
   min-width: 110px;
   flex: 1 1 100%;
 }
-
-.slider-list:first-child{
-  margin-block-end: 16px;
-}
-
 .slider-card{
   text-align: center;
 }
@@ -644,14 +643,6 @@ article.container::before{
   margin-inline: auto;
   margin-block: 12px;
 }
-
-
-/*-----------------------------------*\
-  #LOADING
-\*-----------------------------------*/
-
-
-
 
 
 /*-----------------------------------*\
@@ -674,19 +665,26 @@ article.container::before{
   #MEDIA QUERIES
 \*-----------------------------------*/
 
-@media(min-width:768px){
+@media(min-width: 768px){
   .container{padding: 24px;}
   .title-1{ --title-1:2.4rem}
-  .section >.title-2{margin-block-end: 16px;}
+  .section  > .title-2{margin-block-end: 16px;}
   .card-lg{padding:24px}
   .card-sm{
     padding: 20px;
     display: grid;
     grid-template-rows: min-content 1fr;
   }
-  .header-actions{padding-inline: 16px;}
+  .badge{
+    top: 20px;
+    right: 20px;
+
+  }
+  .header-actions{gap:24px;}
   .header .btn-primary{padding-inline: 16px 24px;}
-  .header.btn-primary.span{clip-path: circle(3% at calc(100% -273px) 6%);}
+  .header .btn-primary .span {display: block;}
+  
+  .search-view{clip-path: circle(3% at calc(100% -273px) 6%);}
 
   main{
     height: calc(100hv - 96px);
@@ -716,8 +714,8 @@ article.container::before{
     height: 160px;
   }
   .highlight-card:nth-child(-n+3){
-    grid-column: span 2;
-    height: 160px;
+    /* grid-column: span 2; use or not see video */
+    height: 120px;
   }
   .highlights .m-icon{
     font-size: 3.6rem;
@@ -749,6 +747,7 @@ article.container::before{
   .card-lg{padding: 36px;}
   .card-sm{padding: 24px;}
   .title-1{--title-1:3.6rem}
+  .highlight-card.two .card-item{column-gap: 24px;}
 
 
   .header.icon-btn{display: none;}
@@ -762,7 +761,7 @@ article.container::before{
     padding-block: 0;
     height: 100%;
   }
-  .search-view,
+  /* .search-view, */
   .search-view.active{
     all: unset;
     display: block;
@@ -782,7 +781,7 @@ article.container::before{
     border-radius: var(--radius-28);
   }
   .search-result,
-  .search-view:not(:focus-within).search-result{
+  .search-view:not(:focus-within).search-result.active{
     display: none;
   }
   .search-view:focus-within .search-result.active{display: block;}
@@ -799,7 +798,7 @@ article.container::before{
     max-height: 360px;
     border-radius: 0 0 var(--radius-28) var(--radius-28);
     border-block-start: 1px solid var(--outline);
-    overflow-y: auto;/*firefox*/
+    overflow-y: auto;
     overflow-y: overlay;
   }
   .search-view .view-list:empty{
@@ -820,8 +819,9 @@ article.container::before{
     grid-template-columns: 360px minmax(0, 1fr);
     gap: 40px;
   }
-  .current-weather .weather-icon{width: 80px;}
-  .forecast-card .title-2{--title-2:2.2rem}
+  .current-weather  .weather-icon{width: 80px;}
+  .forecast-card  .title-2{--title-2:2.2rem}
+
   .highlight-card:nth-child(-n+2){
     height: 200px;
   }
