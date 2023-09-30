@@ -302,8 +302,7 @@ body{
 /*-----------------------------------*\
   #HEADER
 \*-----------------------------------*/
-
-.header .btn-primary.span{
+.header .btn-primary .span{
   display: none;
 }
 .logo img{
@@ -387,16 +386,16 @@ body{
   left: 28px;
   transform: translate(-50%, -50%);
 }
-.search-wrapper > m-icon{display: none;}
+.search-wrapper > .m-icon{display: none;}
 
 .search-wrapper .icon-btn{
   background-color: transparent;
   box-shadow: none;
 }
-.search-view .view-list{
+.search-view  .view-list{
   padding-block: 8px 16px;
 }
-.search-view .view-item{
+.search-view  .view-item{
   position: relative;
   height: 56px;
   display: flex;
@@ -405,10 +404,10 @@ body{
   gap: 16px;
   padding-inline: 16px 24px;
 }
-.search-view.view-item:is(.m-icon, .item-subtitle){
+.search-view  .view-item :is(.m-icon,  .item-subtitle){
   color: var(--on-surface-variant);
 }
-.search-view.view-item .item-link{
+.search-view  .view-item  .item-link{
   position: absolute;
   inset: 0;
   box-shadow: none;
@@ -503,14 +502,14 @@ article.container::before{
 .forecast-card .title-2{
   margin-block-end: 0;
 }
-.forecast-card:is(.card-item,.icon-wrapper){
+.forecast-card :is(.card-item, .icon-wrapper){
   display: flex;
   align-items: center;
 }
-.forecast-card.card-item:not(:last-child){
+.forecast-card .card-item:not(:last-child){
   margin-block-end: 12px;
 }
-.forecast-card.icon-wrapper{
+.forecast-card .icon-wrapper{
   gap: 8px;
 }
 .forecast-card .label-1{
@@ -761,7 +760,7 @@ article.container::before{
     padding-block: 0;
     height: 100%;
   }
-  /* .search-view, */
+  .search-view,
   .search-view.active{
     all: unset;
     display: block;
@@ -770,7 +769,7 @@ article.container::before{
     animation: none;
   }
   .search-wrapper{border-block-end:none;}
-  .search-wrapper > .m-icon{display:block;}
+  /* .search-wrapper > .m-icon{display:block;} */
 
   .search-field,
   .search-view .view-list{
