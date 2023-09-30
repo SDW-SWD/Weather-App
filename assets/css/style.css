@@ -713,7 +713,6 @@ article.container::before{
     height: 160px;
   }
   .highlight-card:nth-child(-n+3){
-    /* grid-column: span 2; use or not see video */
     height: 120px;
   }
   .highlights .m-icon{
@@ -784,6 +783,7 @@ article.container::before{
     display: none;
   }
   .search-view:focus-within .search-result.active{display: block;}
+
   .search-view:has(.search-result.active):focus-within
   .search-field{
       border-bottom-left-radius: 0;
@@ -797,7 +797,6 @@ article.container::before{
     max-height: 360px;
     border-radius: 0 0 var(--radius-28) var(--radius-28);
     border-block-start: 1px solid var(--outline);
-    overflow-y: auto;
     overflow-y: overlay;
   }
   .search-view .view-list:empty{
