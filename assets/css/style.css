@@ -131,12 +131,13 @@ html{
   font-family: var(--ff-nunito-sans);
   font-size: 10px;
   scroll-behavior:smooth;
+  
 }
 body{
   background-color: var(--background);
   color: var(--on-background);
   font-size: var(--body-3);
-  overflow:scroll;
+  overflow:hidden;
   height: 300vh;
 }
 :focus-visible{
