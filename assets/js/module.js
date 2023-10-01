@@ -24,13 +24,18 @@ export const MonthNames =[
     "Nov",
     "Dec"
 ];
-
+/**
+ *
+ * @param {number} dateUnix
+ * @param {number} timezone
+ * @returns {string}
+ */
 export const getData = function(dateUnix, timezone){
     const date = new Date((dateUnix + timezone) * 1000);
     const weekDayName = weekDayNames[date.getUTCDay()];
     const MonthName = MonthNames[date.getUTCMonth()];
 
-    return `${weekDayName} ${date.getUTCDate}, ${MonthName}`;
+    return `${weekDayName} ${date.getUTCDate()}, ${MonthName}`;
 }
 /**
  *
@@ -62,7 +67,7 @@ export const getHours =function(timeUnix , timezone){
     const hours =date.getUTCHours();
     const period = hours >= 12 ? "PM" : "AM";
 
-    return `${hours % 12|| 12}:${period}`;
+    return `${hours % 12|| 12} ${period}`;
     
 }
 /**
@@ -70,7 +75,7 @@ export const getHours =function(timeUnix , timezone){
  * @param {number} mps
  * @returns {number}
  */
-export const map_to_dm_kmph =mps=>{
+export const mps_to_dm_kmh = mps => {
     const mph = mps * 3600;
     return mph / 1000;
 }

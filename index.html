@@ -14,6 +14,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./assets/css/style.css">
+    <script src="./assets/js/app.js" type="module"></script>
+    <script src="./assets/js/route.js" type="module"></script>
+</head>
 <body>
     <header class="header">
         <div class="container">
@@ -39,7 +42,7 @@
                 </div>
 
                 <div class="search-result" data-search-result>
-                    <ul class="view-list" data-search-list>
+                    <!-- <ul class="view-list" data-search-list>
 
                         
                         <li class="view-item">
@@ -54,7 +57,7 @@
 
                             <a href="#" class="item-link has-state" data-search-toggler></a>
                         </li>
-                    </ul>
+                    </ul> -->
                 </div>
 
             </div>
@@ -62,7 +65,8 @@
 
             <div class="header-actions">
 
-                <button class="icon-btn has-state" aria-label="open search" data-search-toggle>
+                <button class="icon-btn has-state" aria-label="open search"
+                data-search-toggler>
                     <span class="m-icon">search</span>
                 </button>
 
@@ -84,7 +88,7 @@
 
 
     <main>
-        <article class="container">
+        <article class="container data-container">
 
             <div class="content-left">
 
@@ -352,7 +356,7 @@
 
 
 
-            <div class="section hourly-forecast" aria-label="hourly forecast"
+            <section class="section hourly-forecast" aria-label="hourly forecast"
             data-hourly forecast>
 
             <h2 class="title-2">Today at</h2>
@@ -567,17 +571,13 @@
 
             
 
-            </div>
+            </section>
 
             </div>
+
+            <div class="loading" data-loading></div>
 
         </article>
     </main>
-
-
-
-
-    <script src="./assets/js/app.js" type="module"></script>
-    <script src="./assets/js/route.js" type="module"></script>
 </body>
 </html>

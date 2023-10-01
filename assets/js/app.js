@@ -1,13 +1,14 @@
 'use strict';
 
-import { fetchData } from "./api";
+import { fetchData, url } from "./api.js";
+import * as module from "./module.js";
 
 
 /**
  *
  * @param {NodeList} elements
  * @param {string} eventType
- * @param {function} callback
+ * @param {Function} callback
  */
 
 const addEventOnElements = function(elements, eventType, callback){
@@ -71,3 +72,5 @@ searchField.addEventListener("input", function(){
         }, searchTimeoutDuration);
     }
 });
+
+const container = document.querySelector("[data-container]");
