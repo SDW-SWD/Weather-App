@@ -1,6 +1,6 @@
     'use strict';
 
-    const api_key = "f633a26445fd2c29bab32689495d8944";  // api key should be generated 
+    const api_key = "96cf50f6564f4a31e0ef64f8b31fbcb1";  // api key should be generated 
     //default to every 30 days so need to log 
 
     /**
